@@ -10,7 +10,7 @@ public class AllContactsTests extends BaseRA{
         System.out.println("id created contact " + id);
         Thread.sleep(3000);
         softAssert.assertEquals(contactsService.getStatusCodeResponseGetAllContacts(token), 200);
-        //softAssert.assertTrue(contactsService.isIdInTheAllContactResponse(token, id));
+        softAssert.assertTrue(contactsService.isIdInTheAllContactResponse(token, id));
         softAssert.assertAll();
     }
 }
